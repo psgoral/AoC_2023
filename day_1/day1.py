@@ -4,6 +4,8 @@ def load_input(filename):
     return [line.strip() for line in fd.readlines()]
 
 
+def find_digits(string): #First exercise
+    return int(''.join([x for x in string if not x.isalpha()]))
 
 def find_digits(string):
 
