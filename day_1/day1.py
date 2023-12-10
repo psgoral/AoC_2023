@@ -4,7 +4,7 @@ def load_input(filename):
     return [line.strip() for line in fd.readlines()]
 
 
-def find_digits(string): #First exercise
+def find_digits_v1(string): #First exercise
     return int(''.join([x for x in string if not x.isalpha()]))
 
 def find_digits(string):
@@ -65,10 +65,12 @@ def find_digits(string):
 def main():
 
     input_data = load_input('day1_input')
-    # numbers = [get_number(x) for x in input_data]
+    numbers = [find_digits_v1(x) for x in input_data]
+    # print(numbers)
+    print(sum(numbers))
+
     numbers2 = [find_digits(x) for x in input_data]
     print(numbers2)
-    # # # print(numbers)
     print(sum(numbers2))
 
 
